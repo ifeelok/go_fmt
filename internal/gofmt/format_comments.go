@@ -29,7 +29,8 @@ func FormatComments(req *common.Request) {
 					strings.HasPrefix(cm.Text, "//*line ") ||
 					strings.HasPrefix(cm.Text, "//nolint") ||
 					strings.HasPrefix(cm.Text, "//lint") ||
-					strings.HasPrefix(cm.Text, "//export ") {
+					strings.HasPrefix(cm.Text, "//export ") ||
+					strings.HasPrefix(cm.Text, "//goland") {
 					// spec comment,ignore
 				} else {
 					// 若 // 后没有空格则补充
